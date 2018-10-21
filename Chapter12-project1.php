@@ -1,6 +1,11 @@
 <?php 
-
-
+    $genre = array("Abstract", "Baroque", "Gothic", "Renaissance");
+    $subjects = array("Animals", "Landscape", "People");
+    function option($arr){
+        foreach($arr as $key) {
+            echo '<option>'.$key.'</option>';
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +21,7 @@
 <?php include 'header.inc.php'; ?>
     
 <main>
-<form class="form"  id="mainForm" method="post">
+<form action="art-process.php" class="form"  id="mainForm" method="post">
    <fieldset class="form__panel">
       <legend class="form__heading">Edit Art Work Details</legend>
         <p class="form__row">
@@ -31,14 +36,18 @@
            <label>Genre</label><br/>
            <select name="genre" class="form__input form__select">
               <option>Choose genre</option> 
-              
+              <?php
+                option($genre);
+              ?>
            </select>
        </p>
        <p class="form__row"> 
            <label>Subject</label><br/>
            <select name="subject" class="form__input form__select">
               <option>Choose subject</option> 
-              
+              <?php
+                option($subjects)
+              ?>
            </select>
        </p>
        <p class="form__row">	
