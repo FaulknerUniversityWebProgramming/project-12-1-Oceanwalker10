@@ -1,6 +1,8 @@
 <?php 
     $genre = array("Abstract", "Baroque", "Gothic", "Renaissance");
     $subjects = array("Animals", "Landscape", "People");
+    
+    // function to output the Genre and Subject <select> lists
     function option($arr){
         foreach($arr as $key) {
             echo '<option>'.$key.'</option>';

@@ -1,5 +1,5 @@
 <?php
-
+// funciton to display the passed form data
 function displayPostStatus() {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<tr>
